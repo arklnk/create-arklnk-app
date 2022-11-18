@@ -1,0 +1,16 @@
+{
+  "name": "create-arklnk-app",
+  "version": "0.0.1",
+  "description": "Fast create arklnk apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cli", "arklnk", "ark-admin"],
+  "repository": {
+    "type": "type",
+    "url": "https://github.com/arklnk/create-arklnk-app"
+  },
+  "author": "hackycy",
+  "license": "MIT"
+}
