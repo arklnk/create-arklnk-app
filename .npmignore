@@ -21,3 +21,6 @@ tsconfig.json
 # definitions
 !**/*.d.ts
 !*.d.ts
+
+# Test
+test
