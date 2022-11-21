@@ -1,16 +1,42 @@
 {
   "name": "create-arklnk-app",
   "version": "0.0.1",
-  "description": "Fast create arklnk apps.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "packageManager": "pnpm@7.15.0",
+  "description": "fast create arklnk apps",
+  "bin": {
+    "create-arklnk-app": "bin/create-arklnk-app.js"
   },
-  "keywords": ["cli", "arklnk", "ark-admin"],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "publish:npm": "npm publish",
+    "lint": "eslint {lib,bin}/**/*.ts --fix",
+    "clean": "rimraf {lib,bin}/**/*.{js,d.ts,js.map,d.ts.map}"
+  },
+  "keywords": [
+    "cli",
+    "arklnk",
+    "ark-admin"
+  ],
   "repository": {
     "type": "type",
-    "url": "https://github.com/arklnk/create-arklnk-app"
+    "url": "https://github.com/arklnk/create-arklnk-app.git"
   },
+  "homepage": "https://github.com/arklnk/create-arklnk-app#readme",
   "author": "hackycy",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^16.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.3"
+  }
 }

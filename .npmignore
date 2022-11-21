@@ -1,0 +1,23 @@
+# project
+.idea/*
+.vscode/*
+.circleci/*
+.github/**/*
+.gitignore
+.prettierrc
+.travis.yml
+Makefile
+node_modules
+.DS_Store
+*.md
+!README.md
+
+# source
+**/*.ts
+*.ts
+tsconfig.json
+.eslintrc.js
+
+# definitions
+!**/*.d.ts
+!*.d.ts
