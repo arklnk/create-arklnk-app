@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/degit': ^2.8.3
   '@types/fs-extra': ^9.0.13
   '@types/inquirer': ^8.2.5
   '@types/node': ^16.14.0
@@ -10,7 +9,6 @@ specifiers:
   '@typescript-eslint/parser': ^5.43.0
   chalk: ^4.1.2
   commander: ^9.4.1
-  degit: ^2.8.4
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
@@ -25,14 +23,12 @@ specifiers:
 dependencies:
   chalk: 4.1.2
   commander: 9.4.1
-  degit: 2.8.4
   fs-extra: 10.1.0
   inquirer: 8.2.5
   ora: 5.4.1
   validate-npm-package-name: 5.0.0
 
 devDependencies:
-  '@types/degit': 2.8.3
   '@types/fs-extra': 9.0.13
   '@types/inquirer': 8.2.5
   '@types/node': 16.18.3
@@ -104,10 +100,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
-    dev: true
-
-  /@types/degit/2.8.3:
-    resolution: {integrity: sha512-CL7y71j2zaDmtPLD5Xq5S1Gv2dFoHl0/GBZm6s39Mj/ls28L3NzAOqf7H4H0/2TNVMgMjMVf9CAFYSjmXhi3bw==}
     dev: true
 
   /@types/fs-extra/9.0.13:
@@ -450,12 +442,6 @@ packages:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
     dependencies:
       clone: 1.0.4
-    dev: false
-
-  /degit/2.8.4:
-    resolution: {integrity: sha512-vqYuzmSA5I50J882jd+AbAhQtgK6bdKUJIex1JNfEUPENCgYsxugzKVZlFyMwV4i06MmnV47/Iqi5Io86zf3Ng==}
-    engines: {node: '>=8.0.0'}
-    hasBin: true
     dev: false
 
   /dir-glob/3.0.1:
