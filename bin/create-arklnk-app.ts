@@ -15,7 +15,7 @@ import {
   gitclone,
 } from '../lib/utils';
 import { ProjPreset } from '../lib/boilerplate';
-import { emptyDirSync, removeSync } from 'fs-extra';
+import { emptyDirSync, removeSync, pathExistsSync } from 'fs-extra';
 import * as ora from 'ora';
 
 let projectName: string;
@@ -77,7 +77,7 @@ async function bootstrap() {
   const boilerplates = preset.boilerplates;
 
   // 如果项目路径已存在，询问是否需要覆盖
-  if (!useCurrentDir && !force) {
+  if (!useCurrentDir && !force && pathExistsSync(projectPath)) {
     const ok = await shouldAskOverwriteDest();
     if (!ok) {
       console.log('\nNothing to do!');
