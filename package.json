@@ -6,6 +6,9 @@
   "bin": {
     "create-arklnk-app": "bin/create-arklnk-app.js"
   },
+  "engines": {
+    "node": ">=14.16"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
@@ -29,7 +32,11 @@
     "access": "public"
   },
   "devDependencies": {
+    "@types/degit": "^2.8.3",
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.5",
     "@types/node": "^16.14.0",
+    "@types/validate-npm-package-name": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.28.0",
@@ -38,5 +45,14 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1",
+    "degit": "^2.8.4",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "validate-npm-package-name": "^5.0.0"
   }
 }
