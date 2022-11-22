@@ -1,6 +1,6 @@
 {
   "name": "create-arklnk-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@7.15.0",
   "description": "fast create arklnk apps",
   "bin": {
