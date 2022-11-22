@@ -109,14 +109,31 @@ async function bootstrap() {
     }
 
     spinner.succeed(`Successfully created project ${chalk.green(projectName)}`);
+    console.log('Get started with the following commands:\n');
 
-    console.log(`\n${chalk.green('Thanks for using arklnk app')}`);
+    // start command
+    for (let i = 0; i < boilerplates.length; i++) {
+      const boilerplate = boilerplates[i];
+      if (!boilerplate.startCommand) continue;
+      const cd = useCurrentDir
+        ? boilerplate.dir
+        : join(projectName, boilerplate.dir);
+
+      console.log(chalk.blue(boilerplate.repo));
+      console.log(chalk.gray(`$ cd ${cd}`));
+      boilerplate.startCommand.forEach((c) => {
+        console.log(chalk.gray(`$ ${c}`));
+      });
+      console.log();
+    }
+
+    console.log(`${chalk.green('Thanks for using arklnk app')}`);
   } catch (err) {
     if (!useCurrentDir) {
       removeSync(projectPath);
     }
 
-    spinner.fail(chalk.red(`\n${err}`));
+    spinner.fail(chalk.red(`${err}`));
     process.exit(1);
   }
 }

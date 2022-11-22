@@ -3,6 +3,7 @@ export interface Boilerplate {
   dir: string;
   branch: string;
   removeFiles?: string[];
+  startCommand?: string[];
 }
 
 export interface Preset {
@@ -18,11 +19,18 @@ const CommonRemoveFiles: string[] = [
   'LICENSE',
 ];
 
+const NodeStartCommand = ['pnpm i', 'pnpm dev'];
+
 export const GoZeroBoilerplate: Boilerplate = {
   repo: 'arklnk/ark-admin-zero',
   dir: 'zero',
   branch: 'main',
   removeFiles: [...CommonRemoveFiles],
+  startCommand: [
+    'docker-compose -f docker-compose-dev.yml up -d',
+    'docker exec -it api /bin/sh',
+    'go mod tidy && modd',
+  ],
 };
 
 export const NestJsBoilerplate: Boilerplate = {
@@ -30,6 +38,7 @@ export const NestJsBoilerplate: Boilerplate = {
   dir: 'nest',
   branch: 'main',
   removeFiles: [...CommonRemoveFiles],
+  startCommand: NodeStartCommand,
 };
 
 export const VueNextBoilerplate: Boilerplate = {
@@ -37,6 +46,7 @@ export const VueNextBoilerplate: Boilerplate = {
   repo: 'arklnk/ark-admin-vuenext',
   branch: 'main',
   removeFiles: [...CommonRemoveFiles],
+  startCommand: NodeStartCommand,
 };
 
 export const PureVueNextBoilerplate: Boilerplate = {
@@ -44,6 +54,7 @@ export const PureVueNextBoilerplate: Boilerplate = {
   repo: 'arklnk/ark-admin-vuenext-pure',
   branch: 'main',
   removeFiles: [...CommonRemoveFiles],
+  startCommand: NodeStartCommand,
 };
 
 // Project Preset
