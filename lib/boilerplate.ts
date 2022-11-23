@@ -61,17 +61,17 @@ export const PureVueNextBoilerplate: Boilerplate = {
 export const ProjPreset: Preset[] = [
   // zero
   {
-    name: 'Go-Zero + Vue3',
+    name: 'Go-Zero + Vue3 - Ark admin application boilerplate with zero(Go)',
     boilerplates: [GoZeroBoilerplate, VueNextBoilerplate],
   },
   // nest
   {
-    name: 'Nestjs + Vue3',
+    name: 'Nestjs + Vue3 - Ark admin application boilerplate with nest(TS)',
     boilerplates: [NestJsBoilerplate, VueNextBoilerplate],
   },
   // pure
   {
-    name: 'Vue pure template (no server)',
+    name: 'Vue3 pure - A modern vue admin boilerplate(Vue)',
     boilerplates: [PureVueNextBoilerplate],
   },
 ];

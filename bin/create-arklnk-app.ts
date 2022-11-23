@@ -119,7 +119,7 @@ async function bootstrap() {
         ? boilerplate.dir
         : join(projectName, boilerplate.dir);
 
-      console.log(chalk.blue(boilerplate.repo));
+      console.log(chalk.green(boilerplate.repo));
       console.log(chalk.gray(`$ cd ${cd}`));
       boilerplate.startCommand.forEach((c) => {
         console.log(chalk.gray(`$ ${c}`));
@@ -128,6 +128,12 @@ async function bootstrap() {
     }
 
     console.log(`${chalk.green('Thanks for using arklnk app')}`);
+    console.log();
+    console.log(
+      `${chalk.red('❤')}  Follow us: ${chalk.blueBright(
+        'https://github.com/arklnk',
+      )}`,
+    );
   } catch (err) {
     if (!useCurrentDir) {
       removeSync(projectPath);
