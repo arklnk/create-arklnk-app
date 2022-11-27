@@ -26,4 +26,10 @@ npm init arklnk-app my-app
 yarn create arklnk-app my-app
 ```
 
+## pnpm
+
+``` sh
+pnpm create arklnk-app my-app
+```
+
 It will create a directory called my-app inside the current folder.
