@@ -4,7 +4,7 @@
 
 Create Arklnk apps with no build configuration.
 
-- [docs.arklnk.com](https://docs.arklnk.com/) – How to create a new arklnk app.
+- [document](https://docs.arklnk.com/admin/cli/) – How to create a new arklnk app.
 
 > Create a project, and you’re good to go.
 
